@@ -1,0 +1,561 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2024.3.6)  27 JUN 2024 21:03
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**"./Tarea 2.tex"
+(Tarea 2.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count188
+\c@section=\count189
+\c@subsection=\count190
+\c@subsubsection=\count191
+\c@paragraph=\count192
+\c@subparagraph=\count193
+\c@figure=\count194
+\c@table=\count195
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count196
+\Gm@cntv=\count197
+\c@Gm@tempcnt=\count198
+\Gm@bindingoffset=\dimen141
+\Gm@wd@mp=\dimen142
+\Gm@odd@mp=\dimen143
+\Gm@even@mp=\dimen144
+\Gm@layoutwidth=\dimen145
+\Gm@layoutheight=\dimen146
+\Gm@layouthoffset=\dimen147
+\Gm@layoutvoffset=\dimen148
+\Gm@dimlist=\toks18
+
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)
+) (C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
+)
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip50
+\multirow@cntb=\count199
+\multirow@dima=\skip51
+\bigstrutjot=\dimen149
+) (C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.st
+y
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen150
+\lightrulewidth=\dimen151
+\cmidrulewidth=\dimen152
+\belowrulesep=\dimen153
+\belowbottomsep=\dimen154
+\aboverulesep=\dimen155
+\abovetopsep=\dimen156
+\cmidrulesep=\dimen157
+\cmidrulekern=\dimen158
+\defaultaddspace=\dimen159
+\@cmidla=\count266
+\@cmidlb=\count267
+\@aboverulesep=\dimen160
+\@belowrulesep=\dimen161
+\@thisruleclass=\count268
+\@lastruleclass=\count269
+\@thisrulewidth=\dimen162
+)
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.
+cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.de
+f
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen163
+\Gin@req@width=\dimen164
+) (C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2024/02/07 v24.2 The Babel package
+\babel@savecnt=\count270
+\U@D=\dimen165
+\l@unhyphenated=\language79
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count271
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/babel-spanish\spanish.
+ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks21
+\es@quotdepth=\count272
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+))
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/es\babe
+l-spanish.tex
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 11.
+)
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip52
+\enit@outerparindent=\dimen166
+\enit@toks=\toks22
+\enit@inbox=\box51
+\enit@count@id=\count273
+\enitdp@description=\count274
+) (C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.st
+y
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count275
+\float@exts=\toks23
+\float@box=\box52
+\@float@everytoks=\toks24
+\@floatcapt=\box53
+)
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip53
+\f@nch@O@elh=\skip54
+\f@nch@O@erh=\skip55
+\f@nch@O@olh=\skip56
+\f@nch@O@orh=\skip57
+\f@nch@O@elf=\skip58
+\f@nch@O@erf=\skip59
+\f@nch@O@olf=\skip60
+\f@nch@O@orf=\skip61
+) (C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen167
+\captionmargin=\dimen168
+\caption@leftmargin=\dimen169
+\caption@rightmargin=\dimen170
+\caption@width=\dimen171
+\caption@indent=\dimen172
+\caption@parindent=\dimen173
+\caption@hangindent=\dimen174
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count276
+\c@continuedfloat=\count277
+Package caption Info: float package is loaded.
+) (C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+)
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/fancyvrb\fancyvrb.sty
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
+\FV@CodeLineNo=\count278
+\FV@InFile=\read3
+\FV@TabBox=\box54
+\c@FancyVerbLine=\count279
+\FV@StepNumber=\count280
+\FV@OutFile=\write3
+) (C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen175
+\ar@mcellbox=\box55
+\extrarowheight=\dimen176
+\NC@list=\toks25
+\extratabsurround=\skip62
+\backup@length=\skip63
+\ar@cellbox=\box56
+)
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
+\LTleft=\skip64
+\LTright=\skip65
+\LTpre=\skip66
+\LTpost=\skip67
+\LTchunksize=\count281
+\LTcapwidth=\dimen177
+\LT@head=\box57
+\LT@firsthead=\box58
+\LT@foot=\box59
+\LT@lastfoot=\box60
+\LT@gbox=\box61
+\LT@cols=\count282
+\LT@rows=\count283
+\c@LT@tables=\count284
+\c@LT@chunks=\count285
+\LT@p@ftn=\toks26
+)
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pd
+ftex.def
+File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count286
+\l__pdf_internal_box=\box62
+) (Tarea 2.aux
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+)
+\openout1 = `"Tarea 2.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 55.
+LaTeX Font Info:    ... okay on input line 55.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.m
+kii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count287
+\scratchdimen=\dimen178
+\scratchbox=\box63
+\nofMPsegments=\count288
+\nofMParguments=\count289
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count290
+\MPscratchDim=\dimen179
+\MPnumerator=\count291
+\makeMPintoPDFobject=\count292
+\everyMPtoPDFconversion=\toks28
+)
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-
+base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.
+cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Info: Redefining \. on input line 55.
+LaTeX Info: Redefining \% on input line 55.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: longtable package is loaded.
+
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 60.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 60.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 60.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 7
+5.
+(C:\Users\Zayner\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 75.
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--106
+
+ []
+
+<Box_prob1.jpeg, id=1, 501.67426pt x 314.3745pt>
+File: Box_prob1.jpeg Graphic file (type jpg)
+<use Box_prob1.jpeg>
+Package pdftex.def Info: Box_prob1.jpeg  used on input line 126.
+(pdftex.def)             Requested size: 318.66948pt x 199.69753pt.
+[1
+
+{C:/Users/Zayner/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+ []
+
+[2 <./Box_prob1.jpeg>] [3] [4] [5] [6]
+<Med_prob2.jpeg, id=31, 438.438pt x 311.36325pt>
+File: Med_prob2.jpeg Graphic file (type jpg)
+<use Med_prob2.jpeg>
+Package pdftex.def Info: Med_prob2.jpeg  used on input line 349.
+(pdftex.def)             Requested size: 318.66948pt x 226.31932pt.
+ [7] [8 <./Med_prob2.jpeg>]
+<lluv_box3.jpeg, id=39, 508.90125pt x 320.99925pt>
+File: lluv_box3.jpeg Graphic file (type jpg)
+<use lluv_box3.jpeg>
+Package pdftex.def Info: lluv_box3.jpeg  used on input line 401.
+(pdftex.def)             Requested size: 318.66948pt x 201.01587pt.
+
+Underfull \hbox (badness 2951) in paragraph at lines 402--402
+[]\T1/cmr/bx/n/12 Figura 3. |\T1/cmr/m/n/12 Pre-ci-pi-ta-ción (mm) por tra-ta-m
+ien-to.RUC:Rainfall Un-see-ded Clouds;
+ []
+
+[9] [10 <./lluv_box3.jpeg>] [11]
+Overfull \hbox (36.72342pt too wide) in paragraph at lines 444--459
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
+
+ []
+
+<RDP_prob4.jpeg, id=49, 461.92575pt x 313.77225pt>
+File: RDP_prob4.jpeg Graphic file (type jpg)
+<use RDP_prob4.jpeg>
+Package pdftex.def Info: RDP_prob4.jpeg  used on input line 487.
+(pdftex.def)             Requested size: 318.66948pt x 216.46956pt.
+[12] [13 <./RDP_prob4.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 495--499
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--499
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--499
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--499
+
+ []
+
+[14]
+<prob5_qqline.jpeg, id=61, 744.98325pt x 413.74574pt>
+File: prob5_qqline.jpeg Graphic file (type jpg)
+<use prob5_qqline.jpeg>
+Package pdftex.def Info: prob5_qqline.jpeg  used on input line 547.
+(pdftex.def)             Requested size: 318.66948pt x 176.97916pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 551--553
+
+ []
+
+[15 <./prob5_qqline.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 591--592
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 593--594
+
+ []
+
+<prob5_tuke.jpeg, id=65, 744.98325pt x 413.74574pt>
+File: prob5_tuke.jpeg Graphic file (type jpg)
+<use prob5_tuke.jpeg>
+Package pdftex.def Info: prob5_tuke.jpeg  used on input line 621.
+(pdftex.def)             Requested size: 318.66948pt x 176.97916pt.
+[16]
+<prob5_inter.jpeg, id=69, 744.98325pt x 413.74574pt>
+File: prob5_inter.jpeg Graphic file (type jpg)
+<use prob5_inter.jpeg>
+Package pdftex.def Info: prob5_inter.jpeg  used on input line 642.
+(pdftex.def)             Requested size: 318.66948pt x 176.97916pt.
+ [17 <./prob5_tuke.jpeg> <./prob5_inter.jpeg>] [18] [19]
+<prob5_mediu.jpeg, id=80, 744.98325pt x 413.74574pt>
+File: prob5_mediu.jpeg Graphic file (type jpg)
+<use prob5_mediu.jpeg>
+Package pdftex.def Info: prob5_mediu.jpeg  used on input line 784.
+(pdftex.def)             Requested size: 318.66948pt x 176.97916pt.
+ [20] [21 <./prob5_mediu.jpeg>]
+<corr_prob6.jpeg, id=87, 467.94826pt x 354.123pt>
+File: corr_prob6.jpeg Graphic file (type jpg)
+<use corr_prob6.jpeg>
+Package pdftex.def Info: corr_prob6.jpeg  used on input line 841.
+(pdftex.def)             Requested size: 318.66948pt x 241.15707pt.
+ [22] [23 <./corr_prob6.jpeg>] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 892--896
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 892--896
+
+ []
+
+<prob7_hist.png, id=98, 551.4201pt x 273.4215pt>
+File: prob7_hist.png Graphic file (type png)
+<use prob7_hist.png>
+Package pdftex.def Info: prob7_hist.png  used on input line 914.
+(pdftex.def)             Requested size: 318.66948pt x 158.01299pt.
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 919--920
+
+ []
+
+<prob7_corrPear.jpeg, id=104, 422.7795pt x 413.74574pt>
+File: prob7_corrPear.jpeg Graphic file (type jpg)
+<use prob7_corrPear.jpeg>
+Package pdftex.def Info: prob7_corrPear.jpeg  used on input line 940.
+(pdftex.def)             Requested size: 318.66948pt x 311.88054pt.
+[26 <./prob7_hist.png>]
+<prob7_corrSpear.jpeg, id=109, 439.04025pt x 413.74574pt>
+File: prob7_corrSpear.jpeg Graphic file (type jpg)
+<use prob7_corrSpear.jpeg>
+Package pdftex.def Info: prob7_corrSpear.jpeg  used on input line 960.
+(pdftex.def)             Requested size: 318.66948pt x 300.31468pt.
+ [27 <./prob7_corrPear.jpeg>]
+<prob7_corrKend.jpeg, id=113, 419.166pt x 410.7345pt>
+File: prob7_corrKend.jpeg Graphic file (type jpg)
+<use prob7_corrKend.jpeg>
+Package pdftex.def Info: prob7_corrKend.jpeg  used on input line 980.
+(pdftex.def)             Requested size: 318.66948pt x 312.26173pt.
+ [28 <./prob7_corrSpear.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 986--989
+
+ []
+
+[29 <./prob7_corrKend.jpeg>]
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1004
+
+ []
+
+<prob7_boxfrij.jpeg, id=120, 744.98325pt x 413.74574pt>
+File: prob7_boxfrij.jpeg Graphic file (type jpg)
+<use prob7_boxfrij.jpeg>
+Package pdftex.def Info: prob7_boxfrij.jpeg  used on input line 1013.
+(pdftex.def)             Requested size: 318.66948pt x 176.97916pt.
+[30 <./prob7_boxfrij.jpeg>] (Tarea 2.aux
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 7062 strings out of 474457
+ 120237 string characters out of 5742283
+ 1948190 words of memory out of 5000000
+ 29313 multiletter control sequences out of 15000+600000
+ 568229 words of font info for 56 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,13n,65p,865b,554s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Zayner\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcr
+m1200.pk> <C:\Users\Zayner\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi
+600\ecrm1000.pk> <C:\Users\Zayner\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
+/ec/dpi600\ecti1200.pk> <C:\Users\Zayner\AppData\Local\MiKTeX\fonts/pk/ljfour/j
+knappen/ec/dpi600\ectt1200.pk> <C:\Users\Zayner\AppData\Local\MiKTeX\fonts/pk/l
+jfour/jknappen/ec/dpi600\ecbi1200.pk> <C:\Users\Zayner\AppData\Local\MiKTeX\fon
+ts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\Zayner\AppData\Local\MiK
+TeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\Zayner\AppData\Lo
+cal\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\Zayner\App
+Data\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk><C:/Users/Zayn
+er/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
+Users/Zayner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12
+.pfb><C:/Users/Zayner/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts
+/cm/cmr8.pfb>
+Output written on "Tarea 2.pdf" (30 pages, 2565269 bytes).
+PDF statistics:
+ 567 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+
