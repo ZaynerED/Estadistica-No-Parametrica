@@ -1,13 +1,14 @@
 #histograma
 datos<- iris$Sepal.Length
 hist(datos, main="Histograma de la longitud del sepalo", 
-     xlab="Longitud del sepalo", ylab="Frecuencia", 
+     xlab="Longitud del sepalo", ylab="Frecuencia" )
 
 # densidad
 den<- density(datos)
 plot(den)
 
-#funcion de distribucion empirica
+#Empirical Cumulative Distribution Function
+
 plot(ecdf(datos))
 
 curve(pnorm(x, mean=mean(datos), sd=sd(datos)), add=TRUE, col="red")
