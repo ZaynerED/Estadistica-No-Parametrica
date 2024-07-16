@@ -6,7 +6,7 @@ rm(list=ls())
 dev.off()
 #Datos
 dat7<-read.csv("prob7.csv",header = T)
-#View(dat7)
+View(dat7)
 library(ggplot2)
 library(skimr)
 library(dplyr)

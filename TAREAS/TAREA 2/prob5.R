@@ -6,7 +6,7 @@ rm(list=ls())
 dev.off()
 # Datos #
 datos3<-read.csv("prob5.csv",header = T)
-View(datos3)
+#View(datos3)
 head(datos3)
 str(datos3)
 
@@ -18,6 +18,7 @@ library(tidyr)
 library(phia)
 library(nortest)
 library(ggplot2)
+library(ggpubr)
 # Parcelas divididas (parametrico) #
 # Análisis de varianza #
 anova_par_div<-aov(Yield ~ blk+ Nitrogen*Rate + 
@@ -54,7 +55,7 @@ str(datos3)
 
 # Verificación de supuestos # 
 # Independencia #
-par(mfrow = c(2,2))
+par(mfrow = c(3,2))
 qqnorm(datos3[datos3$Rate=="1","Yield" ], main="Var1")
 qqline(datos3[datos3$Rate=="1","Yield" ])
 qqnorm(datos3[datos3$Rate=="2","Yield" ], main="Var2")
@@ -63,6 +64,10 @@ qqnorm(datos3[datos3$Rate=="3","Yield" ], main="Var3")
 qqline(datos3[datos3$Rate=="3","Yield" ])
 qqnorm(datos3[datos3$Rate=="4","Yield" ], main="Var4")
 qqline(datos3[datos3$Rate=="4","Yield" ])
+qqnorm(datos3[datos3$Rate=="5","Yield" ], main="Var5")
+qqline(datos3[datos3$Rate=="5","Yield" ])
+qqnorm(datos3[datos3$Rate=="6","Yield" ], main="Var6")
+qqline(datos3[datos3$Rate=="6","Yield" ])
 par(mfrow = c(1,1))
 # Test de hipotesis # 
 # Dado que los grupos tienen mas de 50 eventos se emplea el  #

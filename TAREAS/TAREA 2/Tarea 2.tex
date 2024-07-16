@@ -509,15 +509,18 @@ summary(anova_par_div)
 Resultando:
 	\begin{MyVerbatim}
 Error: blk:Nitrogen
-         Df Sum Sq Mean Sq
-blk       1  891.1   891.1
-Nitrogen  2   67.8    33.9
+Df Sum Sq Mean Sq
+blk       1    551     551
+Nitrogen  2 116448   58224
+
 Error: Within
-	      Df Sum Sq Mean Sq F value Pr(>F)
-Nitrogen       2   2533  1266.7   1.587    0.214
-Rate           1      3     3.2   0.004    0.950
-Nitrogen:Rate  2    785   392.6   0.492    0.614
-Residuals     51  40696   798.0
+Df Sum Sq Mean Sq F value   Pr(>F)    
+Nitrogen       2  26688   13344   7.640 0.000913 ***
+Rate           1   2321    2321   1.329 0.252431    
+Nitrogen:Rate  2  14077    7039   4.030 0.021456 *  
+Residuals     81 141475    1747                     
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 	\end{MyVerbatim}
 \textcolor{blue}{De acuerdo a la prueba anterior, se puede concluir que no existio algun efecto de los tratamientos y su combinación, dado que todos los pvalue se encontraron por encima del alfa (\(\alpha=0.05\)).}
 
@@ -540,7 +543,10 @@ qqnorm(datos3[datos3$Rate=="3","Yield" ], main="Var3")
 qqline(datos3[datos3$Rate=="3","Yield" ])
 qqnorm(datos3[datos3$Rate=="4","Yield" ], main="Var4")
 qqline(datos3[datos3$Rate=="4","Yield" ])
-par(mfrow = c(1,1))
+qqnorm(datos3[datos3$Rate=="5","Yield" ], main="Var5")
+qqline(datos3[datos3$Rate=="5","Yield" ])
+qqnorm(datos3[datos3$Rate=="6","Yield" ], main="Var6")
+qqline(datos3[datos3$Rate=="6","Yield" ])
 \end{MyVerbatim}
 \begin{figure}[H]
 	\centering
@@ -556,36 +562,52 @@ FUN = function(x){ lillie.test(x$Yield)})
 \end{MyVerbatim}
 
 \begin{MyVerbatim}
-datos3$Rate: 1
+atos3$Rate: 1
 
 Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  x$Yield
-D = 0.16597, p-value = 0.3232
+D = 0.19346, p-value = 0.1368
 
------------------------------------------------- 
+------------------------------------------------------------ 
 datos3$Rate: 2
 
 Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  x$Yield
-D = 0.22944, p-value = 0.03258
+D = 0.1143, p-value = 0.8624
 
------------------------------------------------- 
+------------------------------------------------------------ 
 datos3$Rate: 3
 
 Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  x$Yield
-D = 0.20357, p-value = 0.095
+D = 0.13076, p-value = 0.7005
 
------------------------------------------------- 
+------------------------------------------------------------ 
 datos3$Rate: 4
 
 Lilliefors (Kolmogorov-Smirnov) normality test
 
 data:  x$Yield
-D = 0.18674, p-value = 0.1711
+D = 0.15816, p-value = 0.3978
+
+------------------------------------------------------------ 
+datos3$Rate: 5
+
+Lilliefors (Kolmogorov-Smirnov) normality test
+
+data:  x$Yield
+D = 0.24007, p-value = 0.02
+
+------------------------------------------------------------ 
+datos3$Rate: 6
+
+Lilliefors (Kolmogorov-Smirnov) normality test
+
+data:  x$Yield
+D = 0.18257, p-value = 0.196
 	\end{MyVerbatim}
 
 \textcolor{blue}{De esta manera se puede observar que todas las variedes cumplen con el supuesto. Sin ebargo para Rate 2, esta casi en el limite para aceptar que se distribuye de forma normal.}\\
@@ -600,12 +622,12 @@ fligner.test(Yield ~ Rate, data = datos3)
 Resultando:
 \begin{MyVerbatim}
 Fligner-Killeen test of homogeneity of variances
-	
+
 data:  Yield by Rate
-Fligner-Killeen:med chi-squared = 0.86664, df = 3, p-value = 0.8335
+Fligner-Killeen:med chi-squared = 4.6617, df = 5, p-value = 0.4585
 \end{MyVerbatim}
 
-\textcolor{blue}{Con una confiabilidad de 95 \% y de acuerdo con el test de Fligner-Killeen con un p-value de 0.8335 se acepta la hipótesis de homocedasticidad;es decir, las varianzas son iguales.}
+\textcolor{blue}{Con una confiabilidad de 95 \% y de acuerdo con el test de Fligner-Killeen con un p-value de 0.4585 se acepta la hipótesis de homocedasticidad;es decir, las varianzas son iguales.}
 
 \item Utilice el método de Tukey para investigar cual es el mejor tratamiento.
 \begin{MyVerbatim}
@@ -663,15 +685,14 @@ Resultando:
 > anova(anova_rangos)
 Analysis of Variance of Aligned Rank Transformed Data
 
-Table Type: Analysis of Deviance Table (Type III Wald F 
-tests with Kenward-Roger df) 
+Table Type: Analysis of Deviance Table (Type III Wald F tests with Kenward-Roger df) 
 Model: Mixed Effects (lmer)
 Response: art(Yield)
 
-F Df Df.res  Pr(>F)  
-1 Nitrogen      0.19354  2     44 0.82473  
-2 Rate          0.24031  3     44 0.86775  
-3 Nitrogen:Rate 1.22255  6     44 0.31313  
+F Df Df.res     Pr(>F)    
+1 Nitrogen      46.7553  2     68 1.6845e-13 ***
+2 Rate           3.5499  5     68  0.0065398  **
+3 Nitrogen:Rate  2.8759 10     68  0.0047463  **
 ---
 Signif. codes:   0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1 
 \end{MyVerbatim}
@@ -690,93 +711,186 @@ plot(marginal)+theme_pubr()
 Resultando:
 \begin{MyVerbatim}
 > marginal
-Nitrogen          Rate emmean  SE   df lower.CL upper.CL
-Calcium nitrate   1      34.0 8.1 45.6    17.69     50.3
-Potassium nitrate 1      18.2 8.1 45.6     1.89     34.5
-Urea              1      38.2 8.1 45.6    21.89     54.5
-Calcium nitrate   2      26.2 8.1 45.6     9.89     42.5
-Potassium nitrate 2      42.4 8.1 45.6    26.09     58.7
-Urea              2      23.4 8.1 45.6     7.09     39.7
-Calcium nitrate   3      32.8 8.1 45.6    16.49     49.1
-Potassium nitrate 3      29.7 8.1 45.6    13.39     46.0
-Urea              3      30.6 8.1 45.6    14.29     46.9
-Calcium nitrate   4      29.1 8.1 45.6    12.79     45.4
-Potassium nitrate 4      32.8 8.1 45.6    16.49     49.1
-Urea              4      28.6 8.1 45.6    12.29     44.9
-	
-Degrees-of-freedom method: kenward-roger 
-Confidence level used: 0.95 
-> pares
-contrast                           estimate SE df t.ratio p.value
-CalciumN Rate1 - PotassiN Rate1     15.8 11 44   1.430  0.9508
-CalciumN Rate1 - Urea Rate1         -4.2 11 44  -0.380  1.0000
-CalciumN Rate1 - CalciumN Rate2      7.8 11 44   0.706  0.9999
-CalciumN Rate1 - PotassiNRate2      -8.4 11 44  -0.760  0.9997
-CalciumN Rate1 - Urea Rate2         10.6 11 44   0.959  0.9979
-CalciumN Rate1 - CalciumN Rate3      1.2 11 44   0.109  1.0000
-CalciumN Rate1 - PotassiN Rate3      4.3 11 44   0.389  1.0000
-CalciumN Rate1 - Urea Rate3          3.4 11 44   0.308  1.0000
-CalciumN Rate1 - CalciumN Rate4      4.9 11 44   0.443  1.0000
-CalciumN Rate1 - PotassiN Rate4      1.2 11 44   0.109  1.0000
-CalciumN Rate1 - Urea Rate4          5.4 11 44   0.489  1.0000
-PotassiN Rate1 - Urea Rate1         20.0 11 44  -1.810  0.8039
-PotassiN Rate1 - CalciumN Rate2     -8.0 11 44  -0.724  0.9998
-PotassiN Rate1 - PotassiN Rate2    -24.2 11 44  -2.190  0.5649
-PotassiN Rate1 - Urea Rate2         -5.2 11 44  -0.471  1.0000
-PotassiN Rate1 - CalciumN Rate3    -14.6 11 44  -1.321  0.9717
-PotassiN Rate1- PotassiN Rate3     -11.5 11 44  -1.041  0.9957
-PotassiN Rate1- Urea Rate3         -12.4 11 44  -1.122  0.9919
-PotassiN Rate1- CalciumN Rate4     -10.9 11 44  -0.986  0.9973
-PotassiN Rate1- PotassiN Rate4     -14.6 11 44  -1.321  0.9717
-PotassiN Rate1- Urea Rate4         -10.4 11 44  -0.941  0.9982
-Urea Rate1 - CalciumN Rate2         12.0 11 44   1.086  0.9938
-Urea Rate1 - PotassiN Rate2         -4.2 11 44  -0.380  1.0000
-Urea Rate1 - Urea Rate2             14.8 11 44   1.339  0.9687
-Urea Rate1 - CalciumN Rate3          5.4 11 44   0.489  1.0000
-Urea Rate1 - PotassiN Rate3          8.5 11 44   0.769  0.9997
-Urea Rate1 - Urea Rate3              7.6 11 44   0.688  0.9999
-Urea Rate1 - CalciumN Rate4          9.1 11 44   0.824  0.9995
-Urea Rate1 - PotassiN Rate4          5.4 11 44   0.489  1.0000
-Urea Rate1 - Urea Rate4              9.6 11 44   0.869  0.9991
-CalciumN Rate2 - PotassiN Rate2    -16.2 11 44  -1.466  0.9420
-CalciumN Rate2 - Urea Rate2          2.8 11 44   0.253  1.0000
-CalciumN Rate2 - CalciumN Rate3     -6.6 11 44  -0.597  1.0000
-CalciumN Rate2 - PotassiN Rate3      3.5 11 44  -0.317  1.0000
-CalciumN Rate2 - Urea Rate3         -4.4 11 44  -0.398  1.0000
-CalciumN Rate2 - CalciumN Rate4     -2.9 11 44  -0.262  1.0000
-CalciumN Rate2 - PotassiN Rate4     -6.6 11 44  -0.597  1.0000
-CalciumN Rate2 - Urea Rate4         -2.4 11 44  -0.217  1.0000
-PotassiN Rate2 - Urea Rate2         19.0 11 44   1.720  0.8496
-PotassiN Rate2 - CalciumN Rate3      9.6 11 44   0.869  0.9991
-PotassiN Rate2 - PotassiN Rate3     12.7 11 44   1.149  0.9902
-PotassiN Rate2 - Urea Rate3         11.8 11 44   1.068  0.9946
-PotassiN Rate2 - CalciumN Rate4     13.3 11 44   1.204  0.9859
-PotassiN Rate2 - PotassiN Rate4      9.6 11 44   0.869  0.9991
-PotassiN Rate2 - Urea Rate4         13.8 11 44   1.249  0.9813
-Urea Rate2 - CalciumN Rate3         -9.4 11 44  -0.851  0.9993
-Urea Rate2 - PotassiN Rate3         -6.3 11 44  -0.570  1.0000
-Urea Rate2 - Urea Rate3             -7.2 11 44  -0.652  0.9999
-Urea Rate2 - CalciumN Rate4         -5.7 11 44  -0.516  1.0000
-Urea Rate2 - PotassiN Rate4         -9.4 11 44  -0.851  0.9993
-Urea Rate2 - Urea Rate4             -5.2 11 44  -0.471  1.0000
-CalciumN Rate3 - PotassiN Rate3      3.1 11 44   0.281  1.0000
-CalciumN Rate3 - Urea Rate3          2.2 11 44   0.199  1.0000
-CalciumN Rate3 - CalciumN Rate4      3.7 11 44   0.335  1.0000
-CalciumN Rate3 - PotassiN Rate4      0.0 11 44   0.000  1.0000
-CalciumN Rate3 - Urea Rate4          4.2 11 44   0.380  1.0000
-PotassiN Rate3 - Urea Rate3         -0.9 11 44  -0.081  1.0000
-PotassiN Rate3 - CalciumN Rate4      0.6 11 44   0.054  1.0000
-PotassiN Rate3 - PotassiN Rate4     -3.1 11 44  -0.281  1.0000
-PotassiN Rate3 - Urea Rate4          1.1 11 44   0.100  1.0000
-Urea Rate3 - CalciumN Rate4          1.5 11 44   0.136  1.0000
-Urea Rate3 - PotassiN Rate4         -2.2 11 44  -0.199  1.0000
-Urea Rate3 - Urea Rate4              2.0 11 44   0.181  1.0000
-CalciumN Rate4 - PotassiN Rate4     -3.7 11 44  -0.335  1.0000
-CalciumN Rate4 - Urea Rate4          0.5 11 44   0.045  1.0000
-PotassiN Rate4 - Urea Rate4          4.2 11 44   0.380  1.0000
+Nitrogen          Rate emmean SE df lower.CL upper.CL
+Calcium nitrate   1      22.2 11 72     0.36     44.0
+Potassium nitrate 1      59.3 11 72    37.46     81.1
+Urea              1      53.1 11 72    31.26     74.9
+Calcium nitrate   2      17.7 11 72    -4.14     39.5
+Potassium nitrate 2      59.5 11 72    37.66     81.3
+Urea              2      56.5 11 72    34.66     78.3
+Calcium nitrate   3      58.0 11 72    36.16     79.8
+Potassium nitrate 3      50.8 11 72    28.96     72.6
+Urea              3      33.8 11 72    11.96     55.6
+Calcium nitrate   4      60.6 11 72    38.76     82.4
+Potassium nitrate 4      42.2 11 72    20.36     64.0
+Urea              4      26.0 11 72     4.16     47.8
+Calcium nitrate   5      58.0 11 72    36.16     79.8
+Potassium nitrate 5      34.8 11 72    12.96     56.6
+Urea              5      45.5 11 72    23.66     67.3
+Calcium nitrate   6      58.4 11 72    36.56     80.2
+Potassium nitrate 6      31.0 11 72     9.16     52.8
+Urea              6      51.6 11 72    29.76     73.4
 
 Degrees-of-freedom method: kenward-roger 
-P value adjustment: tukey method for comparing a family of 12 estimates 
+Confidence level used: 0.95
+> pares
+ contrast                              estimate SE  df t.ratio p.value
+CalciumN   Rate1 - PotassiumN Rate1      -37.1 15.5 68  -2.395  0.6138
+CalciumN   Rate1 - Urea Rate1            -30.9 15.5 68  -1.995  0.8613
+CalciumN   Rate1 - CalciumN Rate2          4.5 15.5 68   0.290  1.0000
+CalciumN   Rate1 - PotassiumN Rate2      -37.3 15.5 68  -2.408  0.6046
+CalciumN   Rate1 - Urea Rate2            -34.3 15.5 68  -2.214  0.7375
+CalciumN   Rate1 - CalciumN Rate3        -35.8 15.5 68  -2.311  0.6727
+CalciumN   Rate1 - PotassiumN Rate3      -28.6 15.5 68  -1.846  0.9210
+CalciumN   Rate1 - Urea Rate3            -11.6 15.5 68  -0.749  1.0000
+CalciumN   Rate1 - CalciumN Rate4        -38.4 15.5 68  -2.479  0.5537
+CalciumN   Rate1 - PotassiumN Rate4      -20.0 15.5 68  -1.291  0.9976
+CalciumN   Rate1 - Urea Rate4             -3.8 15.5 68  -0.245  1.0000
+CalciumN   Rate1 - CalciumN Rate5        -35.8 15.5 68  -2.311  0.6727
+CalciumN   Rate1 - PotassiumN Rate5      -12.6 15.5 68  -0.813  1.0000
+CalciumN   Rate1 - Urea Rate5            -23.3 15.5 68  -1.504  0.9875
+CalciumN   Rate1 - CalciumN Rate6        -36.2 15.5 68  -2.337  0.6548
+CalciumN   Rate1 - PotassiumN Rate6       -8.8 15.5 68  -0.568  1.0000
+CalciumN   Rate1 - Urea Rate6            -29.4 15.5 68  -1.898  0.9026
+PotassiumN Rate1 - Urea Rate1              6.2 15.5 68   0.400  1.0000
+PotassiumN Rate1 - CalciumN Rate2         41.6 15.5 68   2.685  0.4099
+PotassiumN Rate1 - PotassiumN Rate2       -0.2 15.5 68  -0.013  1.0000
+PotassiumN Rate1 - Urea Rate2              2.8 15.5 68   0.181  1.0000
+PotassiumN Rate1 - CalciumN Rate3          1.3 15.5 68   0.084  1.0000
+PotassiumN Rate1 - PotassiumN Rate3        8.5 15.5 68   0.549  1.0000
+PotassiumN Rate1 - Urea Rate3             25.5 15.5 68   1.646  0.9701
+PotassiumN Rate1 - CalciumN Rate4         -1.3 15.5 68  -0.084  1.0000
+PotassiumN Rate1 - PotassiumN Rate4       17.1 15.5 68   1.104  0.9997
+PotassiumN Rate1 - Urea Rate4             33.3 15.5 68   2.150  0.7777
+PotassiumN Rate1 - CalciumN Rate5          1.3 15.5 68   0.084  1.0000
+PotassiumN Rate1 - PotassiumN Rate5       24.5 15.5 68   1.582  0.9794
+PotassiumN Rate1 - Urea Rate5             13.8 15.5 68   0.891  1.0000
+PotassiumN Rate1 - CalciumN Rate6          0.9 15.5 68   0.058  1.0000
+PotassiumN Rate1 - PotassiumN Rate6       28.3 15.5 68   1.827  0.9273
+PotassiumN Rate1 - Urea Rate6              7.7 15.5 68   0.497  1.0000
+Urea       Rate1 - CalciumN Rate2         35.4 15.5 68   2.285  0.6904
+Urea       Rate1 - PotassiumN Rate2       -6.4 15.5 68  -0.413  1.0000
+Urea       Rate1 - Urea Rate2             -3.4 15.5 68  -0.219  1.0000
+Urea       Rate1 - CalciumN Rate3         -4.9 15.5 68  -0.316  1.0000
+Urea       Rate1 - PotassiumN Rate3        2.3 15.5 68   0.148  1.0000
+Urea       Rate1 - Urea Rate3             19.3 15.5 68   1.246  0.9984
+Urea       Rate1 - CalciumN Rate4         -7.5 15.5 68  -0.484  1.0000
+Urea       Rate1 - PotassiumN Rate4       10.9 15.5 68   0.704  1.0000
+Urea       Rate1 - Urea Rate4             27.1 15.5 68   1.749  0.9489
+Urea       Rate1 - CalciumN Rate5         -4.9 15.5 68  -0.316  1.0000
+Urea       Rate1 - PotassiumN Rate5       18.3 15.5 68   1.181  0.9992
+Urea       Rate1 - Urea Rate5              7.6 15.5 68   0.491  1.0000
+Urea       Rate1 - CalciumN Rate6         -5.3 15.5 68  -0.342  1.0000
+Urea       Rate1 - PotassiumN Rate6       22.1 15.5 68   1.427  0.9928
+Urea       Rate1 - Urea Rate6              1.5 15.5 68   0.097  1.0000
+CalciumN   Rate2 - PotassiumN Rate2      -41.8 15.5 68  -2.698  0.4014
+CalciumN   Rate2 - Urea Rate2            -38.8 15.5 68  -2.505  0.5353
+CalciumN   Rate2 - CalciumN Rate3        -40.3 15.5 68  -2.601  0.4669
+CalciumN   Rate2 - PotassiumN Rate3      -33.1 15.5 68  -2.137  0.7854
+CalciumN   Rate2 - Urea Rate3            -16.1 15.5 68  -1.039  0.9998
+CalciumN   Rate2 - CalciumN Rate4        -42.9 15.5 68  -2.769  0.3561
+CalciumN   Rate2 - PotassiumN Rate4      -24.5 15.5 68  -1.582  0.9794
+CalciumN   Rate2 - Urea Rate4             -8.3 15.5 68  -0.536  1.0000
+CalciumN   Rate2 - CalciumN Rate5        -40.3 15.5 68  -2.601  0.4669
+CalciumN   Rate2 - PotassiumN Rate5      -17.1 15.5 68  -1.104  0.9997
+CalciumN   Rate2 - Urea Rate5            -27.8 15.5 68  -1.795  0.9369
+CalciumN   Rate2 - CalciumN Rate6        -40.7 15.5 68  -2.627  0.4491
+CalciumN   Rate2 - PotassiumN Rate6      -13.3 15.5 68  -0.859  1.0000
+CalciumN   Rate2 - Urea Rate6            -33.9 15.5 68  -2.188  0.7539
+PotassiumN Rate2 - Urea Rate2              3.0 15.5 68   0.194  1.0000
+PotassiumN Rate2 - CalciumN Rate3          1.5 15.5 68   0.097  1.0000
+PotassiumN Rate2 - PotassiumN Rate3        8.7 15.5 68   0.562  1.0000
+PotassiumN Rate2 - Urea Rate3             25.7 15.5 68   1.659  0.9679
+PotassiumN Rate2 - CalciumN Rate4         -1.1 15.5 68  -0.071  1.0000
+PotassiumN Rate2 - PotassiumN Rate4       17.3 15.5 68   1.117  0.9996
+PotassiumN Rate2 - Urea Rate4             33.5 15.5 68   2.162  0.7699
+PotassiumN Rate2 - CalciumN Rate5          1.5 15.5 68   0.097  1.0000
+PotassiumN Rate2 - PotassiumN Rate5       24.7 15.5 68   1.594  0.9778
+PotassiumN Rate2 - Urea Rate5             14.0 15.5 68   0.904  1.0000
+PotassiumN Rate2 - CalciumN Rate6          1.1 15.5 68   0.071  1.0000
+PotassiumN Rate2 - PotassiumN Rate6       28.5 15.5 68   1.840  0.9231
+PotassiumN Rate2 - Urea Rate6              7.9 15.5 68   0.510  1.0000
+Urea       Rate2 - CalciumN Rate3         -1.5 15.5 68  -0.097  1.0000
+Urea       Rate2 - PotassiumN Rate3        5.7 15.5 68   0.368  1.0000
+Urea       Rate2 - Urea Rate3             22.7 15.5 68   1.465  0.9904
+Urea       Rate2 - CalciumN Rate4         -4.1 15.5 68  -0.265  1.0000
+Urea       Rate2 - PotassiumN Rate4       14.3 15.5 68   0.923  1.0000
+Urea       Rate2 - Urea Rate4             30.5 15.5 68   1.969  0.8732
+Urea       Rate2 - CalciumN Rate5         -1.5 15.5 68  -0.097  1.0000
+Urea       Rate2 - PotassiumN Rate5       21.7 15.5 68   1.401  0.9941
+Urea       Rate2 - Urea Rate5             11.0 15.5 68   0.710  1.0000
+Urea       Rate2 - CalciumN Rate6         -1.9 15.5 68  -0.123  1.0000
+Urea       Rate2 - PotassiumN Rate6       25.5 15.5 68   1.646  0.9701
+Urea       Rate2 - Urea Rate6              4.9 15.5 68   0.316  1.0000
+CalciumN   Rate3 - PotassiumN Rate3        7.2 15.5 68   0.465  1.0000
+CalciumN   Rate3 - Urea Rate3             24.2 15.5 68   1.562  0.9817
+CalciumN   Rate3 - CalciumN Rate4         -2.6 15.5 68  -0.168  1.0000
+CalciumN   Rate3 - PotassiumN Rate4       15.8 15.5 68   1.020  0.9999
+CalciumN   Rate3 - Urea Rate4             32.0 15.5 68   2.066  0.8255
+CalciumN   Rate3 - CalciumN Rate5          0.0 15.5 68   0.000  1.0000
+CalciumN   Rate3 - PotassiumN Rate5       23.2 15.5 68   1.498  0.9880
+CalciumN   Rate3 - Urea Rate5             12.5 15.5 68   0.807  1.0000
+CalciumN   Rate3 - CalciumN Rate6         -0.4 15.5 68  -0.026  1.0000
+CalciumN   Rate3 - PotassiumN Rate6       27.0 15.5 68   1.743  0.9505
+CalciumN   Rate3 - Urea Rate6              6.4 15.5 68   0.413  1.0000
+PotassiumN Rate3 - Urea Rate3             17.0 15.5 68   1.097  0.9997
+PotassiumN Rate3 - CalciumN Rate4         -9.8 15.5 68  -0.633  1.0000
+PotassiumN Rate3 - PotassiumN Rate4        8.6 15.5 68   0.555  1.0000
+PotassiumN Rate3 - Urea Rate4             24.8 15.5 68   1.601  0.9769
+PotassiumN Rate3 - CalciumN Rate5         -7.2 15.5 68  -0.465  1.0000
+PotassiumN Rate3 - PotassiumN Rate5       16.0 15.5 68   1.033  0.9999
+PotassiumN Rate3 - Urea Rate5              5.3 15.5 68   0.342  1.0000
+PotassiumN Rate3 - CalciumN Rate6         -7.6 15.5 68  -0.491  1.0000
+PotassiumN Rate3 - PotassiumN Rate6       19.8 15.5 68   1.278  0.9979
+PotassiumN Rate3 - Urea Rate6             -0.8 15.5 68  -0.052  1.0000
+Urea       Rate3 - CalciumN Rate4        -26.8 15.5 68  -1.730  0.9535
+Urea       Rate3 - PotassiumN Rate4       -8.4 15.5 68  -0.542  1.0000
+Urea       Rate3 - Urea Rate4              7.8 15.5 68   0.503  1.0000
+Urea       Rate3 - CalciumN Rate5        -24.2 15.5 68  -1.562  0.9817
+Urea       Rate3 - PotassiumN Rate5       -1.0 15.5 68  -0.065  1.0000
+Urea       Rate3 - Urea Rate5            -11.7 15.5 68  -0.755  1.0000
+Urea       Rate3 - CalciumN Rate6        -24.6 15.5 68  -1.588  0.9786
+Urea       Rate3 - PotassiumN Rate6        2.8 15.5 68   0.181  1.0000
+Urea       Rate3 - Urea Rate6            -17.8 15.5 68  -1.149  0.9994
+CalciumN   Rate4 - PotassiumN Rate4       18.4 15.5 68   1.188  0.9991
+CalciumN   Rate4 - Urea Rate4             34.6 15.5 68   2.233  0.7249
+CalciumN   Rate4 - CalciumN Rate5          2.6 15.5 68   0.168  1.0000
+CalciumN   Rate4 - PotassiumN Rate5       25.8 15.5 68   1.665  0.9667
+CalciumN   Rate4 - Urea Rate5             15.1 15.5 68   0.975  0.9999
+CalciumN   Rate4 - CalciumN Rate6          2.2 15.5 68   0.142  1.0000
+CalciumN   Rate4 - PotassiumN Rate6       29.6 15.5 68   1.911  0.8976
+CalciumN   Rate4 - Urea Rate6              9.0 15.5 68   0.581  1.0000
+PotassiumN Rate4 - Urea Rate4             16.2 15.5 68   1.046  0.9998
+PotassiumN Rate4 - CalciumN Rate5        -15.8 15.5 68  -1.020  0.9999
+PotassiumN Rate4 - PotassiumN Rate5        7.4 15.5 68   0.478  1.0000
+PotassiumN Rate4 - Urea Rate5             -3.3 15.5 68  -0.213  1.0000
+PotassiumN Rate4 - CalciumN Rate6        -16.2 15.5 68  -1.046  0.9998
+PotassiumN Rate4 - PotassiumN Rate6       11.2 15.5 68   0.723  1.0000
+PotassiumN Rate4 - Urea Rate6             -9.4 15.5 68  -0.607  1.0000
+Urea       Rate4 - CalciumN Rate5        -32.0 15.5 68  -2.066  0.8255
+Urea       Rate4 - PotassiumN Rate5       -8.8 15.5 68  -0.568  1.0000
+Urea       Rate4 - Urea Rate5            -19.5 15.5 68  -1.259  0.9982
+Urea       Rate4 - CalciumN Rate6        -32.4 15.5 68  -2.091  0.8114
+Urea       Rate4 - PotassiumN Rate6       -5.0 15.5 68  -0.323  1.0000
+Urea       Rate4 - Urea Rate6            -25.6 15.5 68  -1.653  0.9690
+CalciumN   Rate5 - PotassiumN Rate5       23.2 15.5 68   1.498  0.9880
+CalciumN   Rate5 - Urea Rate5             12.5 15.5 68   0.807  1.0000
+CalciumN   Rate5 - CalciumN Rate6         -0.4 15.5 68  -0.026  1.0000
+CalciumN   Rate5 - PotassiumN Rate6       27.0 15.5 68   1.743  0.9505
+CalciumN   Rate5 - Urea Rate6              6.4 15.5 68   0.413  1.0000
+PotassiumN Rate5 - Urea Rate5            -10.7 15.5 68  -0.691  1.0000
+PotassiumN Rate5 - CalciumN Rate6        -23.6 15.5 68  -1.523  0.9857
+PotassiumN Rate5 - PotassiumN Rate6        3.8 15.5 68   0.245  1.0000
+PotassiumN Rate5 - Urea Rate6            -16.8 15.5 68  -1.084  0.9997
+Urea       Rate5 - CalciumN Rate6        -12.9 15.5 68  -0.833  1.0000
+Urea       Rate5 - PotassiumN Rate6       14.5 15.5 68   0.936  1.0000
+Urea       Rate5 - Urea Rate6             -6.1 15.5 68  -0.394  1.0000
+CalciumN   Rate6 - PotassiumN Rate6       27.4 15.5 68   1.769  0.9440
+CalciumN   Rate6 - Urea Rate6              6.8 15.5 68   0.439  1.0000
+PotassiumN Rate6 - Urea Rate6            -20.6 15.5 68  -1.330  0.9967
+
+Degrees-of-freedom method: kenward-roger 
+P value adjustment: tukey method for comparing a family of 18 estimates  
 \end{MyVerbatim}
 \textcolor{blue}{La prueba anterior muestra que no existe diferencia entre las entre las interacciones, ya que todos los p-value son 1 o cercanos a 1}
 \begin{figure}[H]
