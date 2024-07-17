@@ -31,7 +31,15 @@ curve(ecdf(trees$Girth)(x),xlim = extendrange(trees$Girth),type="s",lwd=2)
 
 #normal
 curve(pnorm(x,mean=media,sd=sd1),add=TRUE,col="red",lwd=2)
-
+#Ejemplo 2
 #Pruebas de bondad de ajuste con paqueterias
-#install.packages("fitdistrplus")
+#install.packages("fitdistrplus") # EN ESTE CASO PARA RECHAZAR HAY QUE TOMAR EL VALOR MAS PEQUEÑO
+#LA DISTANCIA QUE EN EL MODELO WEIBULL ES MAS PEQUEÑO POR ENDE ESTE ES EL MODELO QUE HAY QUE USAR
 library(fitdistrplus)
+ajuste_normal<-fitdist(trees$Girth,"norm") #hace el ajuste
+gofstat(ajuste_normal) # Calcula varias estaddisticas 
+plot(ajuste_normal) #grafica
+#Ajuste weibull
+ajuste_weibull<-fitdist(trees$Girth,"weibull") #hace el ajuste
+gofstat(ajuste_weibull) # Calcula varias estaddisticas
+plot(ajuste_weibull) #grafica
