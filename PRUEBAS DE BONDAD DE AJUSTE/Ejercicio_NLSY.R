@@ -32,5 +32,6 @@ kruskal.test(Income2005~Educ,data=datos)
 
 # Se sospecha de la veracidad de los datos aleatorios, se hara
 # una prueba de aleatoriedad
-# Prueba de aleatoriedad
-
+# Prueba de aleatoriedad/independencia de datos
+install.packages("devtools")
+library(devtools)
