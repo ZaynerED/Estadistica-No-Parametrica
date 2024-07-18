@@ -16,7 +16,7 @@ attach(datos)
 #anova
 anova_shanoon <- aov(Shannon ~ Sitio, data = datos)
 summary(anova_shanoon)
-#barplot(Shannon ~ Sitio, data = datos)
+#barplot(Shannon ~ Sitio, data = dato, col)
 #Residuales
 resid_shanoon <- residuals(anova_shanoon)
 #normalidad 
@@ -29,7 +29,7 @@ par(mfrow=c(1,1))
 
 ggplot(datos, aes(x=Sitio, y=Shannon)) + 
         geom_bar(stat="identity", fill="#D35400")+
-        theme_grey()+
+        theme_pubclean()+
         xlab("Sitio")+
         ylab("Indice de Shannon")+
         ggtitle("Indice de Shannon por Sitio")
@@ -47,8 +47,9 @@ shapiro.test(resid_simpson)
 kruskal.test(Simpson ~ Sitio, data = datos)
 #grafica
 ggplot(datos, aes(x=Sitio, y=Simpson)) + 
-        geom_bar(stat="identity", fill="#82E0AA")+
-        theme_gray()+
+        geom_bar(stat="identity", fill="#0a87cf")+
+        theme_pubclean()+
         xlab("Sitio")+
         ylab("Indice de Shannon")+
         ggtitle("Indice de Simpson por Sitio")
+        
